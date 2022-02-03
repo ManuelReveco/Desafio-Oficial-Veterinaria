@@ -10,7 +10,7 @@
 8. Peso
 9. Diagnóstico
 
-## contendra 3 paginas
+## contendra 3 páginas
 1. formulario
 2. listado de entidades
 3. visualización de una entidad
