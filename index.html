@@ -34,16 +34,16 @@
         </div>
         <div>
             <label for="especie">Especie</label>
-            <select name="especie" id="especie" onchange="raza()">
+            <select id="especie" name="especie">
+                <option value="">seleccione una especie</option>
                 <option value="perro">Perro</option>
                 <option value="gato">Gato</option>
             </select>
         </div>
 
-        Raza
         <label for="raza">Raza</label>
         <select name="raza" id="raza">
-            
+
         </select>
         <div class="genero">
             <p>Género</p>
@@ -67,21 +67,25 @@
         <div class="diagnostico">
             <label for="diagnostico">diagnostico</label>
             <textarea id="diagnostico" name="diagnostico" rows="4" cols="50">
-
             </textarea>
         </div>
 
     </form>
     <script>
-        function raza() {
-            let opcion = document.getElementById("especie").value;
-            if (opcion=="perro")
-            {
-                document.getElementById("raza").value="sanchicha";
-                document.getElementById("raza").value="pastor aleman";
+        //funcion para cargar las razas segun la especie
+        var slcchange = document.getElementById("especie");
+        slcchange.addEventListener("change", function () {
+            if (slcchange.value == "perro") {
+                alert("hola " + slcchange.value);
             }
-            
-        }
+            if (slcchange.value == "gato") {
+                alert("hola " + slcchange.value);
+            }
+
+
+        });
+
+
     </script>
 </body>
 
