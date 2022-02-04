@@ -40,27 +40,30 @@
                 <option value="gato">Gato</option>
             </select>
         </div>
-
-        <label for="raza">Raza</label>
-        <select name="raza" id="raza">
-
-        </select>
+        <div>
+            <label for="raza">Raza</label>
+            <select name="raza" id="raza">
+            </select>
+            <div id="fotoRaza">
+            </div>
+        </div>
+        
         <div class="genero">
-            <p>Género</p>
+           <label>Género</label>
             <input type="radio" name="genero" id="masculino">
             <label for="masculino"></label>masculino
             <input type="radio" name="genero" id="femenino">
             <label for="femenino"></label>femenino
         </div>
         <div class="esterilizado">
-            <p>Está esterilizado</p>
+            <label>Está esterilizado</label>
             <input type="radio" name="esterilizado" id="si">
             <label for="si"></label>Si
             <input type="radio" name="esterilizado" id="no">
             <label for="no"></label>No
         </div>
         <div class="peso">
-            <p>Peso</p>
+            <label>Peso</label>
             <input type="number" name="pseo" id="peso">
         </div>
         <br>
@@ -76,16 +79,59 @@
         var slcchange = document.getElementById("especie");
         slcchange.addEventListener("change", function () {
             if (slcchange.value == "perro") {
-                alert("hola " + slcchange.value);
+               // alert("hola " + slcchange.value);
+                document.getElementById("raza").innerHTML=`<option>seleccione raza</option>
+                <option value="collie">collie</option>
+                <option value="pastor">pastor aleman</option>
+                <option value="husky">husky siberiano</option>
+                `
+                document.getElementById("fotoRaza").innerHTML=``
             }
             if (slcchange.value == "gato") {
-                alert("hola " + slcchange.value);
+                //alert("hola " + slcchange.value);
+                document.getElementById("raza").innerHTML=`<option>seleccione raza</option>
+                <option value="persa">Persa</option>
+                <option value="bengala">Bnegala</option>
+                <option value="siames">Siamés</option>
+                `
+                document.getElementById("fotoRaza").innerHTML=``
             }
 
 
         });
 
+        //funcion para cargar una imagen segun la raza
+        var slcc = document.getElementById("raza");
+        slcc.addEventListener("change", function () {
+            if (slcc.value == "pastor") {
+                document.getElementById("fotoRaza").innerHTML=`<img src="images/perro pastor.jpg"/>`
+                
+            }
+            if (slcc.value == "collie") {
+                document.getElementById("fotoRaza").innerHTML=`<img src="images/perro collie.jpg"/>`
+                
+            }
+            if (slcc.value == "husky") {
+                document.getElementById("fotoRaza").innerHTML=`<img src="images/perro husky.jpg"/>`
+                
+            }
+            
+            if (slcc.value == "persa") {
+                document.getElementById("fotoRaza").innerHTML=`<img src="images/gato persa.jpg"/>`
+                
+            }
+            if (slcc.value == "bengala") {
+                document.getElementById("fotoRaza").innerHTML=`<img src="images/gato bengala.jpg"/>`
+                
+            }
+            if (slcc.value == "siames") {
+                document.getElementById("fotoRaza").innerHTML=`<img src="images/gato siames.jpg"/>`
+                
+            }
+            
 
+
+        });
     </script>
 </body>
 
