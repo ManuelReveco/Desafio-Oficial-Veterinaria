@@ -31,3 +31,7 @@ ul {
       font-size: 50px;
       color: darkgoldenrod;
   }
+
+  div#fotoRaza img{
+    height: 150px;
+  }
