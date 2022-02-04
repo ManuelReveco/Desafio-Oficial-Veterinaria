@@ -1,5 +1,6 @@
 body{
     text-align: center;
+    font-size: 30px;
 }
 /* sacado desde w3schools para crear el menu*/
 ul {
@@ -26,7 +27,7 @@ ul {
     background-color: #111;
   }
 
-  .titulo{
+  #titulo{
       font-size: 50px;
       color: darkgoldenrod;
   }
