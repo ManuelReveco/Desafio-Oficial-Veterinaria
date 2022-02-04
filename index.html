@@ -10,15 +10,79 @@
 </head>
 
 <body>
-    <div class="titulo">Veterinaria Santa Margarita</div>
-    <div class="navegacion">
+    <div id="titulo">Veterinaria Santa Margarita</div>
+    <div id="navegacion">
         <ul>
             <li><a class="active" href="index.html">Inicio</a></li>
             <li><a href="listado.html">Listado</a></li>
             <li><a href="entidad.html">Entidad</a></li>
         </ul>
     </div>
+    <form action="" method="get">
 
+        <div>
+            <label for="nombre">Nombre Paciente</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div>
+            <label for="tutor">Tutor</label>
+            <input type="text" name="tutor" id="tutor">
+        </div>
+        <div>
+            <label for="fecha">Fecha nacimiento</label>
+            <input type="date" name="fecha" id="fecha">
+        </div>
+        <div>
+            <label for="especie">Especie</label>
+            <select name="especie" id="especie" onchange="raza()">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+            </select>
+        </div>
+
+        Raza
+        <label for="raza">Raza</label>
+        <select name="raza" id="raza">
+            
+        </select>
+        <div class="genero">
+            <p>Género</p>
+            <input type="radio" name="genero" id="masculino">
+            <label for="masculino"></label>masculino
+            <input type="radio" name="genero" id="femenino">
+            <label for="femenino"></label>femenino
+        </div>
+        <div class="esterilizado">
+            <p>Está esterilizado</p>
+            <input type="radio" name="esterilizado" id="si">
+            <label for="si"></label>Si
+            <input type="radio" name="esterilizado" id="no">
+            <label for="no"></label>No
+        </div>
+        <div class="peso">
+            <p>Peso</p>
+            <input type="number" name="pseo" id="peso">
+        </div>
+        <br>
+        <div class="diagnostico">
+            <label for="diagnostico">diagnostico</label>
+            <textarea id="diagnostico" name="diagnostico" rows="4" cols="50">
+
+            </textarea>
+        </div>
+
+    </form>
+    <script>
+        function raza() {
+            let opcion = document.getElementById("especie").value;
+            if (opcion=="perro")
+            {
+                document.getElementById("raza").value="sanchicha";
+                document.getElementById("raza").value="pastor aleman";
+            }
+            
+        }
+    </script>
 </body>
 
 </html>
