@@ -13,125 +13,129 @@
     <div id="titulo">Veterinaria Santa Margarita</div>
     <div id="navegacion">
         <ul>
-            <li><a class="active" href="index.html">Inicio</a></li>
-            <li><a href="listado.html">Listado</a></li>
-            <li><a href="entidad.html">Entidad</a></li>
+
+            <li><a class="active" href="index.html">Registro Paciente</a></li>
+
+            <li><a href="listado.html">Listado Pacientes</a></li>
+
+            <li><a href="servicios.html">Servicios</a></li>
+
+            <li><a href="Especialidad.html">Especialidades</a></li>
+
         </ul>
     </div>
-    <form action="" method="get">
+    <form action="#" method="get">
+        <div>
+            <div>
+                <label for="nombre">Nombre Paciente</label>
+                <input type="text" name="nombre" id="nombre" placeholder="nombre de la mascota" required>
+            </div>
+            <div>
+                <label for="tutor">Tutor</label>
+                <input type="text" name="tutor" id="tutor" placeholder="nombre y apellido del dueño" required>
+            </div>
+            <div>
+                <label for="fecha">Fecha nacimiento</label>
+                <input type="date" name="fecha" id="fecha" required>
+            </div>
+            <div>
+                <label for="especie">Especie</label>
+                <select id="especie" name="especie" required>
+                    <option value="">seleccione una especie</option>
+                    <option value="perro">Perro</option>
+                    <option value="gato">Gato</option>
+                </select>
+            </div>
+            <div>
+                <label for="raza">Raza</label>
+                <select name="raza" id="raza" required>
+                    <option value="">selecione una raza</option>
+                </select>
+                <div id="fotoRaza">
+                </div>
+            </div>
 
-        <div>
-            <label for="nombre">Nombre Paciente</label>
-            <input type="text" name="nombre" id="nombre">
-        </div>
-        <div>
-            <label for="tutor">Tutor</label>
-            <input type="text" name="tutor" id="tutor">
-        </div>
-        <div>
-            <label for="fecha">Fecha nacimiento</label>
-            <input type="date" name="fecha" id="fecha">
-        </div>
-        <div>
-            <label for="especie">Especie</label>
-            <select id="especie" name="especie">
-                <option value="">seleccione una especie</option>
-                <option value="perro">Perro</option>
-                <option value="gato">Gato</option>
-            </select>
-        </div>
-        <div>
-            <label for="raza">Raza</label>
-            <select name="raza" id="raza">
-            </select>
-            <div id="fotoRaza">
+            <div class="genero">
+                <label>Género</label>
+                <input type="radio" name="genero" id="masculino" required>
+                <label for="masculino"></label>masculino
+                <input type="radio" name="genero" id="femenino" required>
+                <label for="femenino"></label>femenino
+            </div>
+            <div class="esterilizado">
+                <label>Está esterilizado</label>
+                <input type="radio" name="esterilizado" id="si" required>
+                <label for="si"></label>Si
+                <input type="radio" name="esterilizado" id="no" required>
+                <label for="no"></label>No
+            </div>
+            <div class="peso">
+                <label>Peso</label>
+                <input type="number" name="pseo" id="peso" min="0" required>
+            </div>
+            <br>
+            <div class="diagnostico">
+                <label for="diagnostico">diagnostico</label>
+                <textarea id="diagnostico" name="diagnostico" rows="4" cols="50" required>
+            </textarea>
+            </div>
+            <div>
+                <button type="submit">Registrar Paciente</button>
+                <button type="reset">Cancelar</button>
             </div>
         </div>
-        
-        <div class="genero">
-           <label>Género</label>
-            <input type="radio" name="genero" id="masculino">
-            <label for="masculino"></label>masculino
-            <input type="radio" name="genero" id="femenino">
-            <label for="femenino"></label>femenino
-        </div>
-        <div class="esterilizado">
-            <label>Está esterilizado</label>
-            <input type="radio" name="esterilizado" id="si">
-            <label for="si"></label>Si
-            <input type="radio" name="esterilizado" id="no">
-            <label for="no"></label>No
-        </div>
-        <div class="peso">
-            <label>Peso</label>
-            <input type="number" name="pseo" id="peso">
-        </div>
-        <br>
-        <div class="diagnostico">
-            <label for="diagnostico">diagnostico</label>
-            <textarea id="diagnostico" name="diagnostico" rows="4" cols="50">
-            </textarea>
-        </div>
-
     </form>
     <script>
         //funcion para cargar las razas segun la especie
         var slcchange = document.getElementById("especie");
         slcchange.addEventListener("change", function () {
             if (slcchange.value == "perro") {
-               // alert("hola " + slcchange.value);
-                document.getElementById("raza").innerHTML=`<option>seleccione raza</option>
+                // alert("hola " + slcchange.value);
+                document.getElementById("raza").innerHTML = `<option>seleccione raza</option>
                 <option value="collie">collie</option>
                 <option value="pastor">pastor aleman</option>
                 <option value="husky">husky siberiano</option>
-                `
-                document.getElementById("fotoRaza").innerHTML=``
+                `;
+                document.getElementById("fotoRaza").innerHTML = ``; //para quitar una imagen de gato 
             }
             if (slcchange.value == "gato") {
-                //alert("hola " + slcchange.value);
-                document.getElementById("raza").innerHTML=`<option>seleccione raza</option>
+                document.getElementById("raza").innerHTML = `<option>seleccione raza</option>
                 <option value="persa">Persa</option>
                 <option value="bengala">Bnegala</option>
                 <option value="siames">Siamés</option>
-                `
-                document.getElementById("fotoRaza").innerHTML=``
-            }
-
-
-        });
+                `;
+                document.getElementById("fotoRaza").innerHTML = ``; //para quitar una imagen perro
+            }});
 
         //funcion para cargar una imagen segun la raza
         var slcc = document.getElementById("raza");
         slcc.addEventListener("change", function () {
+            //carga de imagen de perros
             if (slcc.value == "pastor") {
-                document.getElementById("fotoRaza").innerHTML=`<img src="images/perro pastor.jpg"/>`
-                
+                document.getElementById("fotoRaza").innerHTML = `<img src="images/perro pastor.jpg"/>`;
+
             }
             if (slcc.value == "collie") {
-                document.getElementById("fotoRaza").innerHTML=`<img src="images/perro collie.jpg"/>`
-                
+                document.getElementById("fotoRaza").innerHTML = `<img src="images/perro collie.jpg"/>`;
+
             }
             if (slcc.value == "husky") {
-                document.getElementById("fotoRaza").innerHTML=`<img src="images/perro husky.jpg"/>`
-                
+                document.getElementById("fotoRaza").innerHTML = `<img src="images/perro husky.jpg"/>`;
+
             }
-            
+            //carga de imagen de gatos
             if (slcc.value == "persa") {
-                document.getElementById("fotoRaza").innerHTML=`<img src="images/gato persa.jpg"/>`
-                
+                document.getElementById("fotoRaza").innerHTML = `<img src="images/gato persa.jpg"/>`;
+
             }
             if (slcc.value == "bengala") {
-                document.getElementById("fotoRaza").innerHTML=`<img src="images/gato bengala.jpg"/>`
-                
+                document.getElementById("fotoRaza").innerHTML = `<img src="images/gato bengala.jpg"/>`;
+
             }
             if (slcc.value == "siames") {
-                document.getElementById("fotoRaza").innerHTML=`<img src="images/gato siames.jpg"/>`
-                
-            }
-            
+                document.getElementById("fotoRaza").innerHTML = `<img src="images/gato siames.jpg"/>`;
 
-
-        });
+            }});
     </script>
 </body>
 
