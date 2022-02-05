@@ -1,6 +1,8 @@
 body{
     text-align: center;
     font-size: 30px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(211,235,238,0.6811099439775911) 16%, rgba(0,212,255,1) 100%);
 }
 /* sacado desde w3schools para crear el menu*/
 ul {
@@ -9,6 +11,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    
   }
   
   li {
@@ -34,5 +37,33 @@ ul {
 
   div#fotoRaza img{
     height: 150px;
+  }
+
+  div#mensajes{
+    font-size: 25px;
+    color: blue;
+  }
+  table{
+    width: 50%;
+    background: rgb(233,164,151);
+    background: linear-gradient(90deg, rgba(233,164,151,1) 0%, rgba(226,24,32,1) 17%, rgba(213,112,116,1) 98%);
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  table th{
+    color: beige;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  table tr.par{
+    background-color: antiquewhite;
+  }
+  table tr.impar{
+    background-color:rgb(168, 68, 61);
+  }
+  div.msj-mantencion{
+    font-size: 25px;
+    color: blue;
   }
   
