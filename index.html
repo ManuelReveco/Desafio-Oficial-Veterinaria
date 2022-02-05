@@ -18,13 +18,13 @@
 
             <li><a href="listado.html">Listado Pacientes</a></li>
 
-            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="mantencion.html">Servicios</a></li>
 
-            <li><a href="Especialidad.html">Especialidades</a></li>
+            <li><a href="mantencion.html">Especialidades</a></li>
 
         </ul>
     </div>
-    <form action="#" method="get">
+    <form action="index.html" method="get" id="mi-form">
         <div>
             <div>
                 <label for="nombre">Nombre Paciente</label>
@@ -57,10 +57,10 @@
 
             <div class="genero">
                 <label>Género</label>
-                <input type="radio" name="genero" id="masculino" required>
-                <label for="masculino"></label>masculino
-                <input type="radio" name="genero" id="femenino" required>
-                <label for="femenino"></label>femenino
+                <input type="radio" name="genero" id="macho" required>
+                <label for="macho"></label>macho
+                <input type="radio" name="genero" id="hembra" required>
+                <label for="hembra"></label>hembra
             </div>
             <div class="esterilizado">
                 <label>Está esterilizado</label>
@@ -90,7 +90,6 @@
         var slcchange = document.getElementById("especie");
         slcchange.addEventListener("change", function () {
             if (slcchange.value == "perro") {
-                // alert("hola " + slcchange.value);
                 document.getElementById("raza").innerHTML = `<option>seleccione raza</option>
                 <option value="collie">collie</option>
                 <option value="pastor">pastor aleman</option>
@@ -105,7 +104,8 @@
                 <option value="siames">Siamés</option>
                 `;
                 document.getElementById("fotoRaza").innerHTML = ``; //para quitar una imagen perro
-            }});
+            }
+        });
 
         //funcion para cargar una imagen segun la raza
         var slcc = document.getElementById("raza");
@@ -135,8 +135,10 @@
             if (slcc.value == "siames") {
                 document.getElementById("fotoRaza").innerHTML = `<img src="images/gato siames.jpg"/>`;
 
-            }});
+            }
+        });
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
