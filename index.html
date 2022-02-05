@@ -24,65 +24,115 @@
 
         </ul>
     </div>
+    <div>
+        <h1>Registro Pacientes</h1>
+    </div>
     <form action="index.html" method="get" id="mi-form">
         <div>
-            <div>
-                <label for="nombre">Nombre Paciente</label>
-                <input type="text" name="nombre" id="nombre" placeholder="nombre de la mascota" required>
-            </div>
-            <div>
-                <label for="tutor">Tutor</label>
-                <input type="text" name="tutor" id="tutor" placeholder="nombre y apellido del dueño" required>
-            </div>
-            <div>
-                <label for="fecha">Fecha nacimiento</label>
-                <input type="date" name="fecha" id="fecha" required>
-            </div>
-            <div>
-                <label for="especie">Especie</label>
-                <select id="especie" name="especie" required>
-                    <option value="">seleccione una especie</option>
-                    <option value="perro">Perro</option>
-                    <option value="gato">Gato</option>
-                </select>
-            </div>
-            <div>
-                <label for="raza">Raza</label>
-                <select name="raza" id="raza" required>
-                    <option value="">selecione una raza</option>
-                </select>
-                <div id="fotoRaza">
-                </div>
-            </div>
+            <table class="registro">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="nombre">Nombre Paciente</label>
+                        </td>
+                        <td>
+                            <input type="text" name="nombre" id="nombre" placeholder="nombre de la mascota" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="tutor">Tutor</label>
+                        </td>
+                        <td>
+                            <input type="text" name="tutor" id="tutor" placeholder="nombre y apellido del dueño"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fecha">Fecha nacimiento</label>
+                        </td>
+                        <td>
+                            <input type="date" name="fecha" id="fecha" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="especie">Especie</label>
+                        </td>
+                        <td>
+                            <select id="especie" name="especie" required>
+                                <option value="">seleccione una especie</option>
+                                <option value="perro">Perro</option>
+                                <option value="gato">Gato</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="raza">Raza</label>
+                        </td>
+                        <td>
+                            <select name="raza" id="raza" required>
+                                <option value="">selecione una raza</option>
+                            </select>
+                            <div id="fotoRaza">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Género</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="genero" id="macho" required>
+                            <label for="macho"></label>macho
+                            <input type="radio" name="genero" id="hembra" required>
+                            <label for="hembra"></label>hembra
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Está esterilizado</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="esterilizado" id="si" required>
+                            <label for="si"></label>Si
+                            <input type="radio" name="esterilizado" id="no" required>
+                            <label for="no"></label>No
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Peso</label>
+                        </td>
+                        <td>
+                            <input type="number" name="pseo" id="peso" min="0" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="diagnostico">diagnostico</label>
+                        </td>
+                        <td>
+                            <textarea id="diagnostico" name="diagnostico" rows="4" cols="50" required>
+                            </textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit">Registrar Paciente</button>
+                        </td>
+                        <td>
+                            <button type="reset">Cancelar</button>
+                        </td>
+                    </tr>
+                </tbody>
 
-            <div class="genero">
-                <label>Género</label>
-                <input type="radio" name="genero" id="macho" required>
-                <label for="macho"></label>macho
-                <input type="radio" name="genero" id="hembra" required>
-                <label for="hembra"></label>hembra
-            </div>
-            <div class="esterilizado">
-                <label>Está esterilizado</label>
-                <input type="radio" name="esterilizado" id="si" required>
-                <label for="si"></label>Si
-                <input type="radio" name="esterilizado" id="no" required>
-                <label for="no"></label>No
-            </div>
-            <div class="peso">
-                <label>Peso</label>
-                <input type="number" name="pseo" id="peso" min="0" required>
-            </div>
-            <br>
-            <div class="diagnostico">
-                <label for="diagnostico">diagnostico</label>
-                <textarea id="diagnostico" name="diagnostico" rows="4" cols="50" required>
-            </textarea>
-            </div>
-            <div>
-                <button type="submit">Registrar Paciente</button>
-                <button type="reset">Cancelar</button>
-            </div>
+            </table>
+
+
+
         </div>
     </form>
     <script>
