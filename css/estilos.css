@@ -19,7 +19,7 @@ ul {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 25px;
+    padding: 14px 50px;
     text-decoration: none;
   }
   
@@ -35,3 +35,4 @@ ul {
   div#fotoRaza img{
     height: 150px;
   }
+  
