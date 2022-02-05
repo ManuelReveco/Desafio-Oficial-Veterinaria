@@ -54,20 +54,21 @@ ul {
   table.registro{
     width: 50%;
     background: rgb(233,164,151);
-    background: linear-gradient(90deg, rgba(233,164,151,1) 0%, rgb(226, 162, 24) 17%, rgba(213,112,116,1) 98%);
+    background: linear-gradient(90deg, rgb(151, 233, 229) 0%, rgb(58, 69, 233) 17%, rgb(112, 152, 213) 98%);
     font-size: 20px;
     margin: 0 auto;
     text-align: center;
-    
-  table th{
+    color: antiquewhite;
+  }
+  table.listado th{
     color: beige;
     padding-left: 20px;
     padding-right: 20px;
   }
-  table tr.par{
+  table.listado tr.par{
     background-color: antiquewhite;
   }
-  table tr.impar{
+  table.listado tr.impar{
     background-color:rgb(168, 68, 61);
   }
   div.msj-mantencion{
