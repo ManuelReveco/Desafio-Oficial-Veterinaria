@@ -31,7 +31,7 @@
         <div>
             <table class="registro">
                 <tbody>
-                    <tr>
+                    <tr >
                         <td>
                             <label for="nombre">Nombre Paciente</label>
                         </td>
@@ -86,9 +86,9 @@
                         </td>
                         <td>
                             <input type="radio" name="genero" id="macho" required>
-                            <label for="macho"></label>macho
+                            <label for="macho"></label>Macho
                             <input type="radio" name="genero" id="hembra" required>
-                            <label for="hembra"></label>hembra
+                            <label for="hembra"></label>Hembra
                         </td>
                     </tr>
                     <tr>
@@ -107,12 +107,12 @@
                             <label>Peso</label>
                         </td>
                         <td>
-                            <input type="number" name="pseo" id="peso" min="0" required>
+                            <input type="number" name="peso" id="peso" min="0" required>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <label for="diagnostico">diagnostico</label>
+                            <label for="diagnostico">Diagnóstico</label>
                         </td>
                         <td>
                             <textarea id="diagnostico" name="diagnostico" rows="4" cols="50" required>
@@ -150,7 +150,7 @@
             if (slcchange.value == "gato") {
                 document.getElementById("raza").innerHTML = `<option>seleccione raza</option>
                 <option value="persa">Persa</option>
-                <option value="bengala">Bnegala</option>
+                <option value="bengala">Begala</option>
                 <option value="siames">Siamés</option>
                 `;
                 document.getElementById("fotoRaza").innerHTML = ``; //para quitar una imagen perro
