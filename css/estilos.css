@@ -33,6 +33,9 @@ ul {
   #titulo{
       font-size: 50px;
       color: darkgoldenrod;
+      font-weight: bold;
+      padding-bottom: 20px;
+      padding-top: 20px;
   }
 
   div#fotoRaza img{
@@ -54,11 +57,12 @@ ul {
   table.registro{
     width: 50%;
     background: rgb(233,164,151);
-    background: linear-gradient(90deg, rgb(151, 233, 229) 0%, rgb(58, 69, 233) 17%, rgb(112, 152, 213) 98%);
-    font-size: 20px;
+    background: linear-gradient(90deg, rgba(233,164,151,1) 0%, rgba(226,24,32,1) 17%, rgba(213,112,116,1) 98%);
+    font-size: 30px;
     margin: 0 auto;
     text-align: center;
-    color: antiquewhite;
+    color: beige;
+    
   }
   table.listado th{
     color: beige;
@@ -72,7 +76,42 @@ ul {
     background-color:rgb(168, 68, 61);
   }
   div.msj-mantencion{
-    font-size: 25px;
-    color: blue;
+      font-size: 50px;
+      color: darkgoldenrod;
+      font-weight: bold;
+      padding-bottom: 20px;
+      padding-top: 20px;
   }
+  table.ficha{
+    font-size: 20px;
+    width: 50%;
+    background: rgb(233,164,151);
+    background: linear-gradient(90deg, rgba(233,164,151,1) 0%, rgba(226,24,32,1) 17%, rgba(213,112,116,1) 98%);
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  table.diagnostico{
+    font-size: 20px;
+    width: 50%;
+    background: rgb(233,164,151);
+    background: linear-gradient(90deg, rgba(233,164,151,1) 0%, rgba(226,24,32,1) 17%, rgba(213,112,116,1) 98%);
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  div.imagen-paciente{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  table.ficha tr.par{
+    background-color: antiquewhite;
+  }
+  div.imagen-paciente img{
+    height: 250px;
+  }
+
   
